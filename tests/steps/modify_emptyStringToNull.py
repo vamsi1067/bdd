@@ -2,12 +2,12 @@ from behave import (
     when,
     then
 )
-from tests.add_function import to_str_replace_null
+from tests.preProcessing import to_str_replace_null
 import pandas as pd
 
-@when('I get the empty field in the dataframe field userId {userId} ssId {ssId}')
-def when_emptyString(context, userId,ssId):
-    List = [userId, ssId]
+@when('I get the empty field in the dataframe field userId {userId} ssId {ssId} {resource_seq} {entl_seq} {cert_ind} {job_desc}')
+def when_emptyString(context, userId,ssId,resource_seq,entl_seq,cert_ind,job_desc):
+    List = [userId, ssId,resource_seq,entl_seq,cert_ind,job_desc]
     for item in List:
         print(item)
         if item == "empty":

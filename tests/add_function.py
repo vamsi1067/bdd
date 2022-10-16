@@ -17,3 +17,10 @@ def update_config(self, param, config_value):
 
 def to_str_replace_null(input_df, columns):
     return input_df.select([f.col(udf_input_col).cast("string") for udf_input_col in columns]).na.fill('NV')
+
+#need to point
+def filter_cols(input_df, column,values):
+    return input_df
+
+def userPreOrg(input_df, column,values):
+    return input_df
